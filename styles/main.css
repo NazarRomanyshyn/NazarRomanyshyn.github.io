@@ -1003,8 +1003,9 @@
     margin: 37px auto 25px auto;
   }
   .content .bloc-search h5 {
+    width: 300px;
     font-size: 18px;
-    line-height: 0;
+    line-height: 2px;
   }
   .content .bloc-search .box-search {
     width: 100%;
