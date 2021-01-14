@@ -1,2 +1,2 @@
-# NazarRomanyshyn.github.oi
+# NazarRomanyshyn.github.io
 First project
