@@ -1,0 +1,893 @@
+@import './base/reset';
+@import './fonts/fonts';
+@import './base/mixinis';
+@import './base/variables';
+%styImegbox{
+    width: 32%;
+    height: 100%;
+    padding: 220px 25px 25px 25px;
+    color: white;            
+}
+%styLevel{
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content:space-between;
+}
+%styRedbutton{    
+        height: 40px;
+        background-color:#FF4E50;
+        position: relative;       
+        border-radius: 20px;
+        line-height: 3.1;
+        text-align: center;  
+}
+%styh3{
+    text-align: left;
+    margin: 20px 0 25px 0;
+    font-size: 26px;
+    line-height: 26px 
+}
+%styBot{
+    width: 230px;
+    height: 224px;
+    margin: 0 5px;
+    padding: 0 0 0 5px;
+}
+%styImgText{
+    width: 80%;
+    margin: 144px auto 0 auto;
+}
+.header{
+    max-width: 1440px;
+    height: 700px;
+    margin: 0 auto;
+    background-image: url(./images/heder.png);
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    .logo{
+        width: 130px;
+        height: 24px;
+        position: relative;
+        top: 46px;
+        margin: 0 0 0 17%;
+        a{
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        text-decoration:none;
+        line-height: 24px;
+        text-align:justify;
+        }
+    }
+    .pasword{
+        width: 180px;
+        height: 40px;
+        display: flex;
+        margin: 18px auto 0 67.5%;
+        .hov1{
+            @include redbutton (90px, 35px, none, center, 110px, 110px, 110px, 110px);
+            .logIn{
+                font-size: 14px;
+                color: white;
+                text-decoration:none;
+                line-height: 2.5;
+                text-align: center;
+                font-weight: normal;
+            }            
+        }       
+        .hov2{
+            @include redbutton (90px, 35px, none, center, 110px, 110px, 110px, 110px);
+            .signUp{
+                font-size: 14px;
+                color: white;
+                text-decoration:none;
+                line-height: 2.5;
+                text-align: center;
+                font-weight: normal;                
+            }       
+        }        
+    }    
+    .mainText{
+        width: 470px;
+        height: 126px;
+        position: relative;
+        margin: 0 auto;
+        top: 145px;
+        font-weight: bold;
+        font-size: 26px;
+        text-align: center;
+    }
+    .secondText{
+        width: 399px;
+        height: 25px;
+        position: relative;
+        margin: 0 auto;
+        top: 170px;
+        font-weight: 100;
+        font-size: 18px;
+    }
+    h5{
+        font-size: 24px;
+        font-weight: 100;
+    }
+    .redButton{
+        @extend %styRedbutton;
+        width: 225px;        
+        top: 205px;
+        margin: 0 auto;           
+    }
+    .redButton-text{
+        font-size: 14px;
+        font-weight: bold; 
+    }
+}
+.content{
+    max-width: 940px;
+    margin: 90px auto 0px auto;
+    font-family: 'Montserrat', sans-serif;
+    h2{
+        font-size: 28px;
+        text-align: center;
+        margin: 50px 0 34px 0;
+    }
+    h3{
+        @extend %styh3;
+    }
+    p{
+        font-family: 'Roboto' serif;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: lighter;
+    }
+    .boxImg{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content:space-between;
+        .img1{
+            @extend %styImegbox;
+            background-image: url(./images/image1.png);
+            .step1{
+                @include redbutton (70px, 20px, #FF4E50, center, 110px, 110px, 110px, 110px, );
+                @include redbuttontext (2px, 2.2, center, 10px);
+            }            
+        }
+        .img2{
+            @extend %styImegbox;
+            background-image: url(./images/image2.png);
+            .step2{
+                @include redbutton (70px, 20px, #FF4E50, center, 110px, 110px, 110px, 110px);
+                @include redbuttontext (2px, 2.3, center, 10px);
+                margin: 30px 0 25px 0;                        
+            }
+            h3{
+                margin: 20px 0 15px 0; 
+            }
+        }
+        .img3{
+            @extend %styImegbox;
+            background-image: url(./images/image3.png);
+            .step3{
+                @include redbutton (70px, 20px, #FF4E50, center, 110px, 110px, 110px, 110px);
+                @include redbuttontext (2px, 2.3, center, 10px);
+            }
+        }
+    }
+    .fases{
+        width: 100%;
+        height: 100%;
+        margin: 90px auto 0 auto;
+        background:
+            repeating-linear-gradient(transparent,transparent 10px, rgb(240, 179, 179) 12px),
+            repeating-linear-gradient(90deg, transparent,transparent 10px, rgb(240, 179, 179) 12px);        
+        .zagolovok{
+            width: 100%;
+            height: 30px;
+        }
+        .boxfases{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content:space-between;
+            flex-flow:row wrap;
+            .fase{
+                @include fase (220px, 255px, 36px 0 5px 0);
+                .photo{
+                    background-image: url(./images/Photo1.png);
+                    @include photo (120px, 120px, relative, 0 auto, center, 50%);
+                    .oval{
+                        background-image: url(./images/music1.png);
+                        @include oval (20px, 20px, absolute, 0, 0, 8px, cover, #FF4E50, 50%, 8px solid#FF4E50);                                                
+                    }                    
+                }
+                .fase-name{
+                    @include fase-name (center, 14px, 19px 0 22px 0);
+                    font-weight: 700;
+                }
+            }
+            .fase2{
+                @include fase (220px, 255px, 36px 0 5px 0);       
+                .photo2{                    
+                    @include photo (120px, 120px, relative, 0 auto, center, 50%);
+                    background-image: url(./images/Photo2.png);
+                    .oval2{                        
+                        @include oval (20px, 20px, absolute, 0, 0, 8px, cover, #19D4CA, 50%, 8px solid#19D4CA);
+                        background-image: url(./images/Oval2.png);                                              
+                    }                   
+                }
+                .fase-name{
+                    @include fase-name (center, 14px, 19px 0 22px 0);
+                    font-weight: 700;
+                }
+            }
+            .fase3{
+                @include fase (220px, 255px, 36px 0 5px 0);       
+                .photo3{                    
+                    @include photo (120px, 120px, relative, 0 auto, center, 50%);
+                    background-image: url(./images/Photo3.png);
+                    .oval3{                        
+                        @include oval (20px, 20px, absolute, 0, 0, 8px, cover, #FFA710, 50%, 8px solid#FFA710);
+                        background-image: url(./images/oval3.png);                                              
+                    }                   
+                }
+                .fase-name{
+                    @include fase-name (center, 14px, 19px 0 28px 0);
+                    font-weight: 700;
+                }
+            }
+            .fase4{
+                @include fase (220px, 255px, 36px 0 5px 0);       
+                .photo4{                    
+                    @include photo (120px, 120px, relative, 0 auto, center, 50%);
+                    background-image: url(./images/Photo4.png);
+                    .oval4{                        
+                        @include oval (20px, 20px, absolute, 0, 0, 8px, cover, #667DF3, 50%, 8px solid#667DF3);
+                        background-image: url(./images/oval4.png);                                              
+                    }                   
+                }
+                .fase-name{
+                    @include fase-name (center, 14px, 19px 0 28px 0);
+                    font-weight: 700;
+                }                
+            }               
+                .fase-text{
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: lighter;
+                    color: #666666;
+            }
+            }
+        }
+        .faseButton{
+            width: 100%;
+            height: 10%;            
+            .fb{
+                width: 180px;
+                height: 40px;
+                margin: 0 auto;
+                border: 2px solid #FF4E50;
+                border-radius: 20px;                
+                p{
+                    color: #FF4E50;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 2.8;                
+                }                
+            }
+        }
+    .ideas{
+        width: 100%;
+        height: 100%;
+        margin: 90px auto;
+        .level1{
+            @extend %styLevel;
+            .img1{        
+                @include img (300px, 310px, center);
+                background-image: url(./images/img1.png);
+                .img-text{
+                    @extend %styImgText;
+                }
+            }
+            .img2{
+                @include img (300px, 310px, center);
+                background-image: url(./images/img2.png);
+                .img-text{
+                    @extend %styImgText;
+                }
+            }
+            .img3{
+                @include img (300px, 310px, center);
+                background-image: url(./images/img3.png);
+                .text-img3{
+                    width: 200px;
+                    height: 54px;
+                    margin: 129px auto;
+                    text-align: center;
+                    h6{
+                        line-height: 1.2;
+                    }                
+                }
+            }
+        }
+        .level2{
+            @extend %styLevel; 
+            .img4{
+                @include img (300px, 310px, center);
+                background-image: url(./images/img4.png);
+                .img-text{
+                    @extend %styImgText;
+                }
+            }
+            .img5{
+                @include img (620px, 310px, center);
+                background-image: url(./images/img5.png);
+                .img-text{
+                    @extend %styImgText;
+                }
+            }
+        }
+        .level3{
+            @extend %styLevel; 
+            .img6{
+                @include img (620px, 310px, center);
+                background-image: url(./images/img6.png);
+                .img-text{
+                    @extend %styImgText;
+                }
+            }
+            .img7{
+                @include img (300px, 310px, center);
+                background-image: url(./images/img7.png);
+                .img-text{
+                    @extend %styImgText;
+                }
+            }
+        }
+        h6{
+            font-size: 22px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+    
+    }
+    .bloc-search{
+        width: 482px;
+        height: 158px;
+        margin: 0 auto;
+        h5{
+            font-size: 24px;
+            font-weight: 100;
+            text-align: center;
+            font-family: 'Roboto' serif;
+            font-size: 18px;
+            line-height: 2.9;
+            color: #666666;
+        }
+        .box-search{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content:space-between;
+            margin: 5px 0 0 0;
+            .search{
+                width: 299px;
+                height: 40px;
+                .input{
+                    width: 299px;
+                    height: 40px;
+                    border: 1px solid #D4D4D4;
+                    padding: 4px 0 0 15px;
+                }
+                
+            }
+            .redButton{
+                @extend %styRedbutton;
+                width: 172px;
+                .redButton-text{
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                    line-height: 3.1;
+                }
+                         
+            }
+        }
+    }    
+}
+.bottom{
+    max-width: 1440px;
+    height: 224px;
+    margin: 104px auto 0 auto;
+    border-top: 2px solid #FF4E50;
+    display: flex;
+    justify-content: center;
+    padding: 38px 0 0 0;
+    .bot1, .bot2, .bot3{
+        @extend %styBot;
+        .dream{
+            font-size: 16px;
+            color: #FF4E50;
+            font-family: $main-family;
+            font-weight: 100;
+        }
+        h4{
+            font-family: $main-family;
+            font-size: 14px;
+        }
+    .company{
+        margin: 0 0 10px 0;
+    }
+    h5{
+        font-family: $second-family;
+        line-height: 2;
+        color: #CCCCCC;
+    }
+    }
+    .bot4{
+        width: 230px;
+        text-align: right;
+        margin: 0 5px 0 0;
+        position: relative;
+        .bot4-text{
+            color: #CCCCCC;
+            font-family: $main-family;    
+        }
+        .areto{
+            width: 110px;
+            height: 24px;
+            margin: 0 0 0 auto;
+            position: relative;
+            right: 0px;
+            top: 8px;
+            background-image: url(./images/areto.png);
+        }
+    }
+}
+.hov1:hover{
+    border: 2px solid white;
+}
+.hov2:hover{
+    border: 2px solid white;
+}
+
+@media (max-width: 770px){
+    .header{
+        max-width: 768px;
+        height: 700px;       
+    }
+    .content{
+        max-width: 748px;
+        h3{
+         font-size: 24px;
+         line-height: 14px  
+        }
+        .boxImg{
+            .img1{
+                width: 236px;
+                height: 400px;          
+            }
+            .img2{
+                .step2{                    
+                    margin: 30px 0 25px 0;                        
+                }
+                h3{
+                    margin: 20px 0 15px 0; 
+                }
+            }  
+        }
+        .fases{
+            width: 492px;
+            background: none;           
+            }
+        .ideas{
+            width: 748px;
+            .level1{
+                .img1{
+                    min-width: 236px;
+                    height: 310px;
+                }
+                .img2{
+                    min-width: 236px;
+                    height: 310px;
+                }
+                .img3{
+                    min-width: 236px;
+                    height: 310px;
+                }
+            }
+            .level2{               
+                .img4{
+                    min-width: 236px;
+                    height: 310px;
+                }
+                .img5{
+                    min-width: 492px;
+                    height: 310px;
+                }
+            }
+            .level3{           
+                .img6{
+                    min-width: 492px;
+                    height: 310px;
+                }
+                .img7{
+                    min-width: 236px;
+                    height: 310px;
+                }
+            }
+        } 
+    }
+    .bottom{
+        max-width: 768px;
+        height: 224px;
+        justify-content: space-around;
+        padding: 38px 20px 0 30px;
+        .bot4{            
+            text-align: right;
+            margin: 0 5px 0 0;
+        .areto{
+            width: 110px;
+            height: 24px;
+            position: relative;
+            top: 7px;
+            right: 0px;
+            background-image: url(./images/areto.png);
+        }
+        h6{
+            color: #CCCCCC;
+            font-family: $main-family;
+        }    
+        }
+    }    
+}
+@media (max-width: 450px){
+    .header{
+        max-width: 425px;
+        height: 540px;
+        .logo{
+            top: 152px;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+        .pasword{
+            margin: 0 auto;
+            .hov1{
+                top: 0px;
+                left: 0px;           
+            .hov2{
+                position: absolute;
+                top: 0px;
+                left: 90px;            
+            }
+        }
+        }    
+        
+        .mainText{
+            width: 300px;
+            height: 126px;
+            top: 148px;            
+            h1{
+                font-size: 30px;
+            }
+        }
+        .secondText{
+            width: 280px;
+            height: 25px;
+            top: 100px;
+        }
+        h5{
+            font-size: 18px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        .redButton{        
+            width: 280px;        
+            top: 138px;
+            margin: 0 auto;           
+        }
+    }
+    .content{
+        max-width: 425px;
+        margin: 0px auto 0px auto;
+        font-family: 'Montserrat', sans-serif;
+        h2{
+            font-size: 22px;
+            text-align: center;
+            margin: 32px 0 16px 0;
+        }
+        p{
+            font-family: 'Roboto' serif;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: lighter;
+        }
+        .boxImg{
+            width: 300px;
+            height: 100%;
+            margin: 0 auto;
+            flex-direction: column;
+            flex-wrap: wrap;
+            .img1, .img3{
+                width: 300px;
+                height: 240px;
+                margin: 0px auto 10px auto;
+                padding: 65px 30px 15px 20px;               
+                h3{
+                    margin: 43px 0 24px 0;
+                    line-height: 0.6;
+                }
+            }
+            .img2{
+                width: 300px;
+                height: 240px;
+                margin: 0px auto 10px auto;
+                padding: 65px 30px 5px 20px; 
+                h3{
+                    margin: 0px 0 15px 0;  
+                }
+            }    
+        }
+        .fases{
+            width: 100%;
+            height: 100%;
+            margin: -5px auto 0 auto;
+            background: none;
+            .zagolovok{
+                width: 65%;
+                height: 30px;
+                margin: 0 auto 35px auto;
+                font-size: 22px;
+                
+            }
+            .boxfases{
+                width: 300px;
+                height: 910px;
+                margin: 0 auto;
+                justify-content: center;
+                .fase, .fase2, .fase3, .fase4 {
+                    width: 236px;
+                    height: 200px;
+                    margin: 0px auto;                
+                }
+                .fase2{
+                      order: 3;    
+                }
+                .fase3{
+                    order: 2;         
+                }
+                .fase4{
+                    order: 4;                  
+                }               
+            }
+            .faseButton{                     
+                .fb{
+                    width: 280px;
+                    margin: 20px auto 0 auto;               
+                }
+            }    
+        }
+        .ideas{
+            width: 300px;
+            height: 100%;
+            margin: 33px auto 0 auto;
+            .ideas-zagolovok{
+                width: 60%;
+                margin: 0 auto 23px auto;                
+                font-size: 22px;
+                text-align: center;
+            }
+            .level1{
+                width: 300px;
+                margin: 0px auto;
+                flex-direction: column;
+                flex-wrap: wrap;
+                .img1 {
+                    width: 300px;
+                    height: 120px;
+                    margin: 10px 0 0 0;
+                    .img-text{
+                        width: 60%;
+                        margin: 23px auto 0 auto;
+                        h2{
+                            line-height: 1.2;
+                        }                        
+                    }
+                }
+                .img2{
+                    width: 300px;
+                    height: 120px;
+                    margin: 10px 0 0 0;
+                    .img-text{
+                         width: 60%;
+                        margin: 35px auto 0 auto;
+                        h2{
+                            line-height: 1.4;
+                        }
+                    }
+                }
+                .img3{
+                    width: 300px;
+                    height: 120px;
+                    margin: 10px 0 0 0;
+                    .text-img3{
+                        width: 200px;
+                        height: 54px;
+                        margin: 33px auto 0 auto;
+                        h6{
+                            font-size: 22px;
+                            line-height: 1.23;    
+                        }
+                    }                  
+                }
+            }
+            .level2{
+                width: 300px;
+                margin: 0px auto;
+                flex-direction: column;
+                flex-wrap: wrap;
+                .img4{
+                    min-width: 300px;
+                    height: 120px;
+                    margin: 10px 0 0 0;
+                    .img-text{
+                        width: 60%;
+                        margin: 50px auto 0 auto;
+                    }                    
+                }
+                .img5{
+                    min-width: 300px;
+                    height: 120px;
+                    margin: 10px 0 0 0;
+                    .img-text{
+                        width: 100%;
+                        margin: 48px auto 0 auto;
+                    }                    
+                }       
+            }
+            .level3{
+                width: 300px;
+                margin: 0px auto;
+                flex-direction: column;
+                flex-wrap: wrap;
+                .img6{
+                    min-width: 300px;
+                    height: 120px;
+                    margin: 10px 0 0 0;
+                    .img-text{
+                        width: 100%;
+                        margin: 48px auto 0 auto;
+                    }
+                }
+                .img7{
+                    min-width: 300px;
+                    height: 120px;
+                    margin: 10px 0 0 0;
+                    .img-text{
+                        width: 100%;
+                        margin: 48px auto 0 auto;
+                    }
+                }                
+            }                                         
+        }
+        .bloc-search{
+            width: 300px;
+            height: 192px;
+            margin: 0 auto;
+            .search-zagolovok{
+                width: 70%;
+                margin: 37px auto 25px auto;
+            }
+            h5{
+                font-size: 18px;                  
+                line-height: 0;                
+            }
+            .box-search{
+                width: 100%;
+                height: 40px;
+                flex-wrap: wrap;
+                margin: 22px 0 0 0;
+                .search{
+                    width: 280px;
+                    height: 40px;
+                    margin: 0 auto;
+                    .input{
+                        width: 280px;
+                        height: 40px;
+                        border: 1px solid #D4D4D4;
+                        padding: 4px 0 0 15px;
+                    }                    
+                }
+                .redButton{
+                    width: 280px;
+                    margin: 10px auto;
+                    .redButton-text{
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #FFFFFF;
+                        line-height: 3.1;
+                    }                             
+                }    
+            }    
+        }        
+    }
+    .bottom{
+        max-width: 320px;
+        height: 100%;
+        margin: 38px auto 0 auto;
+        border-top: 1px solid #FF4E50;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: start;      
+        padding: 0;
+        .bot1{
+            width: 100%;
+            height: 32px;
+            margin: 22px auto 0 auto;
+            .dream{
+                font-size: 16px;
+                text-align: center;
+            }
+            h4{
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+        .bot2{
+            width: 100%;
+            height: 76px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+            .company{
+                margin: 0 auto;
+            }            
+        }        
+        .bot3{
+            width: 100%;
+            height: 30px;
+            margin: 0;
+            text-align: center;
+        }
+        h5{
+           display: inline-block;
+            line-height: 2;
+            text-align: center;
+            margin: 0 5px 0 5px;    
+        }
+        .bot4{
+            width: 100%;
+            height: 50px;
+            text-align: right;
+            margin: 0 0px 0 0;
+            .bot4-text{
+                text-align: center;
+            }
+            .areto{
+                width: 110px;
+                height: 24px;
+                position: static;
+                margin: 8px auto;
+                background-image: url(./images/areto.png);
+            }   
+        }
+    }
+}
+   
+          
+            
+        
+
+
+    
+                   
+
+            
+
+
+    
