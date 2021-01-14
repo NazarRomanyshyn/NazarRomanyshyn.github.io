@@ -1,0 +1,57 @@
+@mixin redbutton ($w, $h, $bc, $ta, $brlr, $btrr, $bbrr, $bblr) {
+    width: $w;
+    height: $h;
+    background-color: $bc;
+    text-align: $ta;
+    border-top-left-radius: $brlr;
+    border-top-right-radius: $btrr;
+    border-bottom-right-radius: $bbrr;
+    border-bottom-left-radius: $bblr;      
+}
+@mixin redbuttontext ($ls, $lh, $ta, $fs) {
+    letter-spacing: $ls;
+    line-height: $lh;
+    text-align: $ta; 
+    font-size: $fs;
+}
+
+@mixin fase ($w, $h, $m) {
+    width: $w;
+    height: $h;
+    margin: $m;    
+}
+@mixin photo ($w, $h, $p, $m, $bp, $br) {
+    width: $w;
+    height: $h;
+    position: $p;
+    margin: $m;
+    background-position: $bp;
+    border-radius: $br;    
+}
+@mixin oval ($w, $h, $p, $r, $bo, $pa, $bs, $bc, $br, $b) { 
+    width: $w;
+    height: $h;
+    position: $p;
+    right: $r;
+    bottom: $bo; 
+    padding: $pa; 
+    background-size: $bs; 
+    background-color: $bc;
+    border-radius: $br;
+    border: $b;
+}
+@mixin fase-name ($ta, $fs, $m){
+    text-align: $ta;
+    font-size: $fs;
+    margin: $m;
+}
+@mixin fase-text ($ta, $ff, $fw) {
+    text-align: $fa;
+    font-family: $ff;
+    font-weight: $fw;    
+}
+@mixin img ($w, $h, $bp) { 
+    min-width: $w;
+    height: $h;
+    background-position: $bp;
+}
